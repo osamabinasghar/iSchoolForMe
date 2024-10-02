@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider 1</title>
+    <!-- mobile responsive meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" sizes="57x57" href="img/favicon.svg">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/favicon.svg">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon.svg">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/favicon.svg">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon.svg">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/favicon.svg">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/favicon.svg">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/favicon.svg">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon.svg">
+	<link rel="icon" type="image/png" sizes="192x192" href="img/favicon.svg">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon.svg">
+	<link rel="icon" type="image/png" sizes="96x96" href="img/favicon.svg">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon.svg">
+	<link rel="manifest" href="img/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- CSS for Slider 1 -->
+    <style>
+        .how-app-work-section {
+            padding-top: 135px;
+        }
+
+        .how-app-work-section .title {
+            margin-bottom: 40px;
+        }
+
+        .how-app-work-section .title h3 {
+            margin: 0;
+            color: #170B35;
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .how-app-work-section .how-app-work-content-wrap {
+            padding-left: 85px;
+        }
+
+        .how-app-work-section .how-app-work-content {
+            padding-top: 30px;
+            padding-bottom: 45px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .how-app-work-section .how-app-work-content:before {
+            content: '';
+            width: 2px;
+            height: 100%;
+            background: url(../img/gradient-sep.png) no-repeat center center;
+            position: absolute;
+            top: 0;
+            left: 45px;
+        }
+
+        .how-app-work-section .single-how-app-work {
+            padding-left: 10px;
+        }
+
+        .how-app-work-section .single-how-app-work+.single-how-app-work {
+            margin-top: 60px;
+        }
+
+        .how-app-work-section .single-how-app-work .icon-box,
+        .how-app-work-section .single-how-app-work .text-box {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .how-app-work-section .single-how-app-work .icon-box .inner {
+            width: 74px;
+            height: 74px;
+            background: #1e56a7;
+            background: -webkit-gradient(left top, right top, color-stop(0%, #1e56a7), color-stop(98%, #3b79bd), color-stop(100%, #3b79bd));
+            background: -webkit-gradient(linear, left top, right top, from(#1e56a7), color-stop(98%, #3b79bd), to(#3b79bd));
+            background: linear-gradient(to right, #1e56a7 0%, #3b79bd 98%, #3b79bd 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e56a7', endColorstr='#3b79bd', GradientType=1);
+            position: relative;
+            border-radius: 50%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .how-app-work-section .single-how-app-work .icon-box .inner:before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            right: 2px;
+            bottom: 2px;
+            border-radius: 50%;
+            background: #fff;
+            opacity: 1;
+            -webkit-transition: all .4s ease;
+            transition: all .4s ease;
+        }
+
+        .how-app-work-section .single-how-app-work .icon-box .inner i {
+            background: -webkit-gradient(linear, left top, right top, from(#1e56a7), color-stop(98%, #3b79bd), to(#3b79bd));
+            background: linear-gradient(to right, #1e56a7 0%, #3b79bd 98%, #3b79bd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 74px;
+            font-size: 44px;
+            position: relative;
+        }
+
+        .how-app-work-section .single-how-app-work .icon-box .inner:hover {
+            -webkit-box-shadow: 0px 18px 37px rgba(212, 50, 151, 0.2);
+            box-shadow: 0px 18px 37px rgba(212, 50, 151, 0.2);
+        }
+
+        .how-app-work-section .single-how-app-work .icon-box .inner:hover i {
+            color: #fff;
+            -webkit-text-fill-color: #fff;
+        }
+
+        .how-app-work-section .single-how-app-work .icon-box .inner:hover img,
+        .how-app-work-section .active .single-how-app-work .icon-box .active .inner img {
+            display: none !important;
+        }
+
+        .how-app-work-section .single-how-app-work .icon-box .inner img {
+            position: absolute;
+            width: 40px;
+            display: block;
+        }
+
+        .how-app-work-section .single-how-app-work .icon-box .inner:hover:before {
+            opacity: 0;
+        }
+
+        .how-app-work-section .single-how-app-work .icon-box .active .inner {
+            -webkit-box-shadow: 0px 18px 37px rgba(212, 50, 151, 0.2);
+            box-shadow: 0px 18px 37px rgba(212, 50, 151, 0.2);
+        }
+
+        .how-app-work-section .single-how-app-work .icon-box .active .inner i {
+            color: #fff;
+            -webkit-text-fill-color: #fff;
+        }
+
+        .how-app-work-section .single-how-app-work .icon-box .active .inner:before {
+            opacity: 0;
+        }
+
+        .how-app-work-section .single-how-app-work .text-box {
+            padding-left: 40px;
+        }
+
+        .how-app-work-section .single-how-app-work .text-box h4,
+        .how-app-work-section .single-how-app-work .text-box p {
+            margin: 0;
+        }
+
+        .how-app-work-section .single-how-app-work .text-box h4 {
+            font-size: 20px;
+            color: #150A33;
+            font-weight: 500;
+        }
+
+        .how-app-work-section .single-how-app-work .text-box p {
+            font-size: 14px;
+            line-height: 27px;
+            color: #656565;
+            margin-top: 10px;
+        }
+
+        .how-app-work-section .download-btn {
+            display: inline-block;
+            vertical-align: middle;
+            background: #1e56a7;
+            background: -webkit-gradient(left top, right top, color-stop(0%, #1e56a7), color-stop(98%, #3b79bd), color-stop(100%, #3b79bd));
+            background: -webkit-gradient(linear, left top, right top, from(#1e56a7), color-stop(98%, #3b79bd), to(#3b79bd));
+            background: linear-gradient(to right, #1e56a7 0%, #3b79bd 98%, #3b79bd 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e56a7', endColorstr='#3b79bd', GradientType=1);
+            position: relative;
+            padding: 12px 0;
+            padding-left: 80px;
+            border-radius: 28px;
+            padding-right: 40px;
+        }
+
+        .how-app-work-section .download-btn:before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            right: 2px;
+            bottom: 2px;
+            border-radius: 28px;
+            background: #fff;
+            opacity: 1;
+            -webkit-transition: all .4s ease;
+            transition: all .4s ease;
+        }
+
+        .how-app-work-section .download-btn i.fab {
+            font-size: 30px;
+            background: -webkit-gradient(linear, left top, right top, from(#1e56a7), color-stop(98%, #3b79bd), to(#3b79bd));
+            background: linear-gradient(to right, #1e56a7 0%, #3b79bd 98%, #3b79bd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            left: 35px;
+            -webkit-transition: all .4s ease;
+            transition: all .4s ease;
+        }
+
+        .how-app-work-section .download-btn span.inner {
+            position: relative;
+            display: block;
+        }
+
+        .how-app-work-section .download-btn span.avail,
+        .how-app-work-section .download-btn span.store-name {
+            display: block;
+            background: -webkit-gradient(linear, left top, right top, from(#1e56a7), color-stop(98%, #3b79bd), to(#3b79bd));
+            background: linear-gradient(to right, #1e56a7 0%, #3b79bd 98%, #3b79bd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+            line-height: 1em;
+            -webkit-transition: all .4s ease;
+            transition: all .4s ease;
+        }
+
+        .how-app-work-section .download-btn span.avail {
+            font-size: 12.5px;
+        }
+
+        .how-app-work-section .download-btn span.store-name {
+            text-transform: uppercase;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        .how-app-work-section .download-btn.active,
+        .how-app-work-section .download-btn:hover {
+            -webkit-box-shadow: 0px 15px 30px rgb(0, 64, 190, 0.27);
+            box-shadow: 0px 15px 30px rgb(0, 64, 190, 0.27);
+        }
+
+        .how-app-work-section .download-btn.active:before,
+        .how-app-work-section .download-btn:hover:before {
+            opacity: 0;
+        }
+
+        .how-app-work-section .download-btn.active i.fab,
+        .how-app-work-section .download-btn.active span.avail,
+        .how-app-work-section .download-btn.active span.store-name,
+        .how-app-work-section .download-btn:hover i.fab,
+        .how-app-work-section .download-btn:hover span.avail,
+        .how-app-work-section .download-btn:hover span.store-name {
+            color: #fff;
+            -webkit-text-fill-color: #fff;
+        }
+
+        .how-app-work-section .download-btn.active {
+            margin-right: 15px;
+        }
+
+        .how-app-work-section .how-app-work-slider-wrapper {
+            position: relative;
+            width: 305px;
+            height: 655px;
+            overflow: hidden;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 50px;
+            -webkit-box-shadow: 0px 18px 37px rgba(212, 50, 151, 0.2);
+            box-shadow: 0px 18px 37px rgba(212, 50, 151, 0.2);
+        }
+
+        .how-app-work-section .how-app-work-screen-mobile-image {
+            background-image: url(../img/fature-moc.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            display: block;
+            height: 655px;
+            left: calc(50% + 0.5px);
+            position: absolute;
+            top: 0px;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            width: 310px;
+            z-index: 2;
+        }
+
+        .how-app-work-section .bx-wrapper {
+            border: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border-radius: 50px;
+        }
+
+        .how-app-work-section .bx-wrapper .slide-item {
+            text-align: center;
+        }
+
+        .how-app-work-section .bx-wrapper .slide-item img {
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 50px;
+        }
+
+        .how-app-work-section .pager-item {
+            display: block;
+        }
+
+        .how-app-work-section .pager-item+.pager-item {
+            margin-top: 60px;
+        }
+
+        .how-app-work-section .pager-item.active .icon-box .inner:before {
+            opacity: 0;
+        }
+
+        .how-app-work-section .pager-item.active .icon-box .inner i {
+            color: #fff;
+            -webkit-text-fill-color: #fff;
+        }
+
+        .how-app-work-section .how-app-work-slider-content {
+            position: relative;
+        }
+
+        .how-app-work-section .how-app-work-slider-content img.circled-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
+    <style>
+        .how-app-work-section.alt .how-app-work-content:before {
+            left: unset !important;
+            right: 45px;
+        }
+
+        .how-app-work-section.alt .single-how-app-work .text-box {
+            padding-left: 0 !important;
+            padding-right: 40px;
+        }
+
+        .how-app-work-section.alt {
+            padding-top: 0px
+        }
+
+        .how-app-work-section.alt .single-how-app-work {
+            padding-left: 0px !important;
+            padding-right: 10px;
+        }
+        
+        .how-app-work-section .single-how-app-work .icon-box .inner:hover img.alt,
+        .how-app-work-section .active .single-how-app-work .icon-box .inner img.alt {
+            display: block !important;
+        }
+
+        .how-app-work-section .single-how-app-work .icon-box .inner .alt {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <section class="how-app-work-section" id="modules">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 how-app-work-slider-content" style="padding-top: 100px;">
+					<img src="img/circle.png" class="circled-img" alt="Phone Image" />
+					<div class="how-app-work-slider-wrapper">
+						<div class="how-app-work-screen-mobile-image"></div>
+						<ul class="slider">
+							<li class="slide-item">
+								<img src="img/how-we-work-slide-1.png" alt="iSchoolForMe" />
+							</li>
+							<li class="slide-item">
+								<img src="img/how-we-work-slide-2.png" alt="iSchoolForMe" />
+							</li>
+							<li class="slide-item">
+								<img src="img/how-we-work-slide-3.png" alt="iSchoolForMe" />
+							</li>
+							<li class="slide-item"></li>
+							<img src="img/how-we-work-slide-4.png" alt="iSchoolForMe" />
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="how-app-work-content-wrap">
+						<div class="title">
+							<h3>How does this App Work?</h3>
+						</div>
+						<div class="how-app-work-content" id="how-app-work-slider-pager">
+							<a href="#" class="pager-item active" data-slide-index="0">
+								<div class="single-how-app-work ">
+									<div class="icon-box">
+										<div class="inner">
+											<img src="img/module-1.svg" alt="module 1">
+											<img class="alt" src="img/module-1-white.svg" alt="module 1">
+										</div>
+									</div>
+									<div class="text-box">
+										<h4>Notice Boards</h4>
+										<p>iSchoolForMe provide important updates, announcements, and school events for
+											parents and students.</p>
+									</div>
+								</div>
+							</a>
+							<a href="#" class="pager-item" data-slide-index="1">
+								<div class="single-how-app-work">
+									<div class="icon-box">
+										<div class="inner">
+											<img src="img/module-2.svg" alt="module 2">
+											<img class="alt" src="img/module-2-white.svg" alt="module 2">
+										</div>
+									</div>
+									<div class="text-box">
+										<h4>Attendance</h4>
+										<p>iSchoolForMe allows parents to track their children's daily attendance,
+											absences, and punctuality effortlessly.</p>
+									</div>
+								</div>
+							</a>
+							<a href="#" class="pager-item" data-slide-index="2">
+								<div class="single-how-app-work ">
+									<div class="icon-box">
+										<div class="inner">
+											<img src="img/module-3.svg" alt="module 3">
+											<img class="alt" src="img/module-3-white.svg" alt="module 3">
+										</div>
+									</div>
+									<div class="text-box">
+										<h4>Receive Fee Voucher</h4>
+										<p>iSchoolForMe enables parents to easily access, download, and track their
+											children's fees.</p>
+									</div>
+								</div>
+							</a>
+							<a href="#" class="pager-item" data-slide-index="3">
+								<div class="single-how-app-work ">
+									<div class="icon-box">
+										<div class="inner">
+											<img src="img/module-4.svg" alt="module 4">
+											<img class="alt" src="img/module-4-white.svg" alt="module 4">
+										</div>
+									</div>
+									<div class="text-box">
+										<h4>Notifications</h4>
+										<p>iSchoolForMe keep students updated with real-time alerts on assignments,
+											grades, and school events.</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+    <!-- iFrame for Slider 2 -->
+    <iframe src="slider-2.html" frameborder="0" style="height: 1000px;width: 100vw ;"></iframe>
+  
+
+    <script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap-select.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/isotope.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/waypoints.min.js"></script>
+	<script src="js/jquery.counterup.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/jquery.bxslider.min.js"></script>
+	<script src="js/custom.js"></script>
+    <script>
+        function thmbxSlider() {
+            if ($('.how-app-work-slider-wrapper .slider').length) {
+                $('.how-app-work-slider-wrapper .slider').bxSlider({
+                    // adaptiveHeight: true,
+                    auto: false,
+                    controls: false,
+                    pause: 3000,
+                    speed: 500,
+                    pagerCustom: '#how-app-work-slider-pager'
+                });
+            }
+
+            if ($('.how-app-work-slider-wrapper.alt .slider').length) {
+                $('.how-app-work-slider-wrapper.alt .slider').bxSlider({
+                    // adaptiveHeight: true,
+                    auto: false,
+                    controls: false,
+                    pause: 3000,
+                    speed: 500,
+                    pagerCustom: '#how-app-work-slider-pager-2'
+                });
+            }
+        }
+    </script>
+</body>
+</html>
